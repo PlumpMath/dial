@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://Images/Tilemaps/MainTilemap.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16.0209, 16.077 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Tile" type="Sprite" parent="."]
+
+transform/pos = Vector2( 69.4934, 65.4055 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 10
+
+[node name="Ground" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0.902527, -87.5425 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 10
+frame = 1
+
+[node name="Exit" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0.108093, 0.241867 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 10
+frame = 3
+
+[node name="Water" type="Sprite" parent="."]
+
+transform/pos = Vector2( 227.24, 1.4696 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 10
+frame = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Water"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 3
+collision/mask = 3
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Water/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+

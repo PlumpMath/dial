@@ -1,0 +1,6 @@
+Row 1. Frames 1-8 are for walking left and right. (I invert the right walking)
+Row 2. Frames 1-8 are for down walking
+Row 3. Frames 1-8 are for walking up
+Row 4. Frames 1-8 are for shooting right and left
+Row 5. Frames 1-8 are for shooting down
+Row 6. Frames 1-8 are for shooting up

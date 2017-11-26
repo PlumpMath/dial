@@ -1,0 +1,3 @@
+Row 1. Frames 1-8 are for grapple traveling in all directions.
+Row 2. Frames 1-8 are for striking and grabbing in all directions.
+Row 3. Frames 1-8 are for reaching the end of the range and striking ungrabbable objects.

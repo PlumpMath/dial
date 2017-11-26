@@ -1,0 +1,13 @@
+Ideally there will be seperate files for each of the tilemaps described below.
+Currently used files FloorTilemap, MainTilemap, and PitTiles are not ideal.
+
+Ideal Tilemaps:
+    1. WalkTilemap.png     - All 32x32 tiles that can be walked over by character/enemies.
+    2. PitTilemap.png      - These 32x32 tiles should kill enemies/character and be able to be walked into.
+    3. TraverseTilemap.png - The 32x32 tiles should be able to be passed by using the grapple or by flying enemies.
+                             The character will be unable to walk into them and the character dies if they land in them.
+    4. WallTilemap.png     - These should be multiple seperate files of 32x64 that can be grabbed by the grapple.
+    5. BlockTilemap.png    - These 32x32 tiles should be impassable by enemies/character and not grabbable by the grapple. 
+
+
+ 
