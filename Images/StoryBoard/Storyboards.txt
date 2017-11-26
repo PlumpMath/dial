@@ -1,0 +1,15 @@
+So each of the animations are 8 frames and would prolly look 
+best at 300ms framerate. 
+
+I think 1st storyboard, looped. Then player hits any key
+zoomed 1st storyboard looped, any key
+2nd storyboard looped, any key
+fade out, change to 3rd storyboard looped, fade in, any key
+game start. 
+
+----------------
+In the background folder, I have the looped 8 frame Title screen.
+
+I placed in buttons as well, so prolly just place the original buttons
+invisible and placed over the animated background. Also a fade out and
+/fade into first storyboard
