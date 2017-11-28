@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=1]
+
+[ext_resource path="res://Images/StoryBoard/1st Storyboard/1st_1.png" type="Texture" id=1]
+[ext_resource path="res://Images/StoryBoard/1st Storyboard/1st_2.png" type="Texture" id=2]
+[ext_resource path="res://Images/StoryBoard/1st Storyboard/1st_3.png" type="Texture" id=3]
+[ext_resource path="res://Images/StoryBoard/1st Storyboard/1st_4.png" type="Texture" id=4]
+[ext_resource path="res://Images/StoryBoard/1st Storyboard/1st_5.png" type="Texture" id=5]
+[ext_resource path="res://Images/StoryBoard/1st Storyboard/1st_6.png" type="Texture" id=6]
+[ext_resource path="res://Images/StoryBoard/1st Storyboard/1st_7.png" type="Texture" id=7]
+[ext_resource path="res://Images/StoryBoard/1st Storyboard/1st_8.png" type="Texture" id=8]
+
+[node name="Story1" type="Node2D"]
+
+[node name="One" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Two" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Three" type="Sprite" parent="."]
+
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Four" type="Sprite" parent="."]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Five" type="Sprite" parent="."]
+
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Six" type="Sprite" parent="."]
+
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Seven" type="Sprite" parent="."]
+
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Eight" type="Sprite" parent="."]
+
+texture = ExtResource( 8 )
+centered = false
+
+

@@ -3,18 +3,21 @@ extends Node
 var mLevelNum
 var mLevelStr
 var mSceneNum
-var mCharPacked
-var mCharResetPos
+var mSound
 const LEVEL_PREFIX = "res://Code/Level/Level";
 const STORY_PREFIX = "res://Code/StoryBoard/Story"
 var mSceneArray = Array()
 
 func _ready():
 	mSceneNum = -1
-	mCharPacked = load("res://Code/Character/MainChar.tscn")
+	var soundPacked = preload("res://Code/Singletons/SamplePlayer.tscn")
+	mSound = soundPacked.instance()
+	self.add_child(mSound)
+	mSound.play("clock_music_finished_smp")
 	mSceneArray.append(STORY_PREFIX+"00.tscn")
 	mSceneArray.append(STORY_PREFIX+"01.tscn")
 	mSceneArray.append(STORY_PREFIX+"02.tscn")
+	mSceneArray.append(STORY_PREFIX+"03.tscn")
 	mSceneArray.append(LEVEL_PREFIX+"00.tscn")
 	mSceneArray.append(LEVEL_PREFIX+"01.tscn")
 	mSceneArray.append(LEVEL_PREFIX+"02.tscn")

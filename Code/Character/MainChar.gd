@@ -63,7 +63,7 @@ func reset_grapple():
 	var newGrapple = mPackedGrapple.instance()
 	add_child(newGrapple)
 	mGrapple = newGrapple
-	#set_particles causes many debug errors to occur, but no memory leak
+	# set_particles causes many debug errors to occur, but no memory leak
 	# delay resolving these errors.
 	mAttractor.set_particles_path("../Grapple/Particles2D")
 

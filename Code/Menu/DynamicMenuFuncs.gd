@@ -32,6 +32,12 @@ static func center_camera_in_background(camera, background):
 	var offset = backgroundCenter - cameraCenter
 	camera.set_global_pos(camera.get_pos()+offset)
 	
+static func center_camera_in_sprite(camera, sprite):
+	var backgroundCenter = sprite.get_pos()
+	var cameraCenter = camera.get_camera_screen_center()
+	var offset = backgroundCenter - cameraCenter
+	camera.set_global_pos(camera.get_pos()+offset)
+	
 static func get_pos_at_center(centerToSet, objSize, objTopLeftPos):
 	var objCenter = (objSize/2)+objTopLeftPos
 	var offset = centerToSet - objCenter
