@@ -19,6 +19,38 @@ vframes = 10
 hframes = 10
 frame = 1
 
+[node name="RightPit" type="Sprite" parent="."]
+
+transform/pos = Vector2( 263.03, 0.482411 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 10
+frame = 10
+
+[node name="LeftPit" type="Sprite" parent="."]
+
+transform/pos = Vector2( 310.582, -0.0579638 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 10
+frame = 11
+
+[node name="BottomPit" type="Sprite" parent="."]
+
+transform/pos = Vector2( 356.513, -0.0579638 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 10
+frame = 20
+
+[node name="TopPit" type="Sprite" parent="."]
+
+transform/pos = Vector2( 403.524, -0.598308 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 10
+frame = 21
+
 [node name="Water" type="Sprite" parent="."]
 
 transform/pos = Vector2( 166.485, 2.79086 )

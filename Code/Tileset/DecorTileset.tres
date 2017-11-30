@@ -1,15 +1,10 @@
-[gd_resource type="TileSet" load_steps=3 format=1]
+[gd_resource type="TileSet" load_steps=2 format=1]
 
-[ext_resource path="res://Images/Tilemaps/MainTilemap.png" type="Texture" id=1]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 16.0209, 16.077 )
+[ext_resource path="res://Images/Misc/Grid32p.32p.10t.10t.png" type="Texture" id=1]
 
 [resource]
 
-0/name = "Tile"
+0/name = "Dot1"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
@@ -18,9 +13,7 @@ extents = Vector2( 16.0209, 16.077 )
 0/navigation_offset = Vector2( 16, 16 )
 0/shape_offset = Vector2( 0, 0 )
 0/shapes = [  ]
-0/one_way_collision_direction = Vector2( 0, 0 )
-0/one_way_collision_max_depth = 0.0
-1/name = "Ground"
+1/name = "Dot2"
 1/texture = ExtResource( 1 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
@@ -29,31 +22,25 @@ extents = Vector2( 16.0209, 16.077 )
 1/navigation_offset = Vector2( 16, 16 )
 1/shape_offset = Vector2( 0, 0 )
 1/shapes = [  ]
-1/one_way_collision_direction = Vector2( 0, 0 )
-1/one_way_collision_max_depth = 0.0
-2/name = "Exit"
+2/name = "Dot3"
 2/texture = ExtResource( 1 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 96, 0, 32, 32 )
+2/region = Rect2( 64, 0, 32, 32 )
 2/occluder_offset = Vector2( 16, 16 )
 2/navigation_offset = Vector2( 16, 16 )
 2/shape_offset = Vector2( 0, 0 )
 2/shapes = [  ]
-2/one_way_collision_direction = Vector2( 0, 0 )
-2/one_way_collision_max_depth = 0.0
-3/name = "Water"
+3/name = "Dot4"
 3/texture = ExtResource( 1 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 64, 0, 32, 32 )
+3/region = Rect2( 96, 0, 32, 32 )
 3/occluder_offset = Vector2( 16, 16 )
 3/navigation_offset = Vector2( 16, 16 )
 3/shape_offset = Vector2( 0, 0 )
-3/shapes = [ SubResource( 1 ) ]
-3/one_way_collision_direction = Vector2( 0, 0 )
-3/one_way_collision_max_depth = 0.0
-4/name = "RightPit"
+3/shapes = [  ]
+4/name = "Scratch1"
 4/texture = ExtResource( 1 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
@@ -62,9 +49,7 @@ extents = Vector2( 16.0209, 16.077 )
 4/navigation_offset = Vector2( 16, 16 )
 4/shape_offset = Vector2( 0, 0 )
 4/shapes = [  ]
-4/one_way_collision_direction = Vector2( 0, 0 )
-4/one_way_collision_max_depth = 0.0
-5/name = "LeftPit"
+5/name = "Scratch2"
 5/texture = ExtResource( 1 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
@@ -73,28 +58,40 @@ extents = Vector2( 16.0209, 16.077 )
 5/navigation_offset = Vector2( 16, 16 )
 5/shape_offset = Vector2( 0, 0 )
 5/shapes = [  ]
-5/one_way_collision_direction = Vector2( 0, 0 )
-5/one_way_collision_max_depth = 0.0
-6/name = "BottomPit"
+6/name = "Scratch3"
 6/texture = ExtResource( 1 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 0, 64, 32, 32 )
+6/region = Rect2( 64, 32, 32, 32 )
 6/occluder_offset = Vector2( 16, 16 )
 6/navigation_offset = Vector2( 16, 16 )
 6/shape_offset = Vector2( 0, 0 )
 6/shapes = [  ]
-6/one_way_collision_direction = Vector2( 0, 0 )
-6/one_way_collision_max_depth = 0.0
-7/name = "TopPit"
+7/name = "Scratch4"
 7/texture = ExtResource( 1 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
-7/region = Rect2( 32, 64, 32, 32 )
+7/region = Rect2( 96, 32, 32, 32 )
 7/occluder_offset = Vector2( 16, 16 )
 7/navigation_offset = Vector2( 16, 16 )
 7/shape_offset = Vector2( 0, 0 )
 7/shapes = [  ]
-7/one_way_collision_direction = Vector2( 0, 0 )
-7/one_way_collision_max_depth = 0.0
+8/name = "Scratch5"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 128, 32, 32, 32 )
+8/occluder_offset = Vector2( 16, 16 )
+8/navigation_offset = Vector2( 16, 16 )
+8/shape_offset = Vector2( 0, 0 )
+8/shapes = [  ]
+9/name = "Scratch6"
+9/texture = ExtResource( 1 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 160, 32, 32, 32 )
+9/occluder_offset = Vector2( 16, 16 )
+9/navigation_offset = Vector2( 16, 16 )
+9/shape_offset = Vector2( 0, 0 )
+9/shapes = [  ]
 

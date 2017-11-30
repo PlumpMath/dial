@@ -26,6 +26,7 @@ func _ready():
 	mExit = get_node("../Exit")
 	mAttractor = get_node("ParticleAttractor2D")
 	mHeart.connect("area_enter",mExit,"_exit")
+	mGameState.mExitState = false
 	set_fixed_process(true)
 	
 func die():

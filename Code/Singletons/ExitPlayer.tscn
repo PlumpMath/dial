@@ -1,17 +1,17 @@
 [gd_scene load_steps=3 format=1]
 
-[ext_resource path="res://Sound/Background/clock_music_finished.smp" type="Sample" id=1]
+[ext_resource path="res://Sound/General/level_complete_finished.wav" type="Sample" id=1]
 
 [sub_resource type="SampleLibrary" id=1]
 
-samples/clock_music_finished_smp = {
-"db": 1.0,
+samples/level_complete_finished = {
+"db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 1 )
 }
 
-[node name="SamplePlayer" type="SamplePlayer"]
+[node name="ExitPlayer" type="SamplePlayer"]
 
 config/polyphony = 1
 config/samples = SubResource( 1 )

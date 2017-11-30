@@ -1,18 +1,23 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=19 format=1]
 
 [ext_resource path="res://Code/Character/MainChar.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Code/Tileset/FloorTileset.tres" type="TileSet" id=2]
-[ext_resource path="res://Code/Tileset/PitTileset.tres" type="TileSet" id=3]
-[ext_resource path="res://Code/Tileset/ProcessedBlockMap.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Code/Level/Exit.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Code/Moveable/LightPiece.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Code/Moveable/HeavyPiece.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Code/Moveable/MediumPiece.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Code/Tileset/ProcessedSideWallTileMap.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Code/Tileset/ProcessedCeilingTilemap.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Code/Juntion/LightJunction.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Code/Juntion/MediumJunction.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Code/Juntion/HeavyJunction.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Code/Tileset/ProcessedDecorTiles.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Code/Tileset/PitTileset.tres" type="TileSet" id=4]
+[ext_resource path="res://Code/Tileset/ProcessedBlockMap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Code/Tileset/ProcessedTraverseTileMap.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Code/Level/Exit.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Code/Moveable/LightPiece.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Code/Moveable/HeavyPiece.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Code/Moveable/MediumPiece.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Code/Tileset/ProcessedSideWallTileMap.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Code/Tileset/ProcessedCeilingTilemap.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Code/Juntion/LightJunction.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Code/Juntion/MediumJunction.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Code/Juntion/HeavyJunction.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Code/Decoration/DecorGear1.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Code/Decoration/DecorGear3.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Code/Decoration/DecorGear2.tscn" type="PackedScene" id=18]
 
 [node name="Level" type="Node"]
 
@@ -37,16 +42,20 @@ collision/bounce = 0.0
 collision/layers = 3
 collision/mask = 3
 occluder/light_mask = 1
-tile_data = IntArray( -65535, 1, -65534, 1, -65533, 1, -65532, 1, -65531, 1, -65530, 1, -65529, 1, -65528, 1, -65527, 3, -65526, 3, -65525, 1, -65524, 1, -65523, 3, -65522, 3, -65521, 1, -65520, 1, -65519, 1, -65518, 1, -65517, 3, -65516, 1, -65515, 1, -65514, 1, -65513, 1, -65512, 1, 1, 1, 2, 1, 3, 1, 4, 1, 5, 1, 6, 1, 7, 1, 8, 1, 9, 3, 10, 3, 11, 1, 12, 1, 13, 3, 14, 3, 15, 1, 16, 1, 17, 1, 18, 1, 19, 3, 20, 3, 21, 1, 22, 1, 23, 1, 65537, 1, 65538, 1, 65539, 1, 65540, 1, 65541, 1, 65542, 1, 65543, 1, 65544, 3, 65545, 3, 65546, 3, 65548, 1, 65549, 3, 65550, 3, 65551, 1, 65552, 1, 65554, 1, 65555, 3, 65556, 3, 65557, 1, 65558, 1, 65559, 1, 131073, 1, 131074, 1, 131075, 1, 131076, 1, 131077, 1, 131078, 1, 131080, 3, 131081, 3, 131082, 3, 131083, 1, 131084, 1, 131085, 3, 131086, 3, 131087, 1, 131088, 1, 131089, 1, 131090, 1, 131092, 3, 131093, 3, 131095, 1, 196609, 1, 196610, 1, 196611, 1, 196612, 1, 196613, 1, 196614, 1, 196615, 1, 196616, 3, 196617, 1, 196618, 3, 196619, 1, 196620, 1, 196621, 3, 196622, 3, 196623, 1, 196624, 1, 196625, 1, 196626, 1, 196627, 3, 196628, 3, 196629, 1, 196630, 1, 196631, 1, 262145, 1, 262146, 1, 262147, 1, 262148, 1, 262152, 3, 262153, 3, 262154, 3, 262155, 3, 262156, 1, 262157, 3, 262158, 3, 262159, 1, 262160, 1, 262161, 1, 262162, 1, 262163, 3, 262164, 3, 262165, 1, 262166, 1, 262167, 1, 327681, 1, 327682, 1, 327683, 1, 327684, 1, 327688, 3, 327689, 3, 327690, 3, 327691, 3, 327692, 3, 327693, 3, 327694, 3, 327695, 3, 327696, 3, 327698, 1, 327699, 3, 327700, 3, 327701, 1, 327702, 1, 327703, 1, 393217, 1, 393218, 1, 393219, 1, 393220, 1, 393221, 1, 393222, 1, 393224, 3, 393225, 3, 393226, 3, 393227, 1, 393228, 1, 393229, 3, 393230, 3, 393231, 1, 393232, 1, 393233, 1, 393234, 1, 393235, 3, 393236, 3, 393237, 1, 393239, 1, 458753, 1, 458755, 1, 458756, 1, 458757, 1, 458758, 1, 458759, 1, 458760, 3, 458761, 3, 458762, 3, 458763, 1, 458764, 1, 458765, 1, 458766, 3, 458767, 1, 458768, 1, 458769, 1, 458770, 1, 458771, 3, 458772, 1, 458773, 1, 458774, 1, 458775, 1, 524289, 1, 524290, 1, 524291, 1, 524292, 1, 524293, 1, 524294, 1, 524295, 1, 524296, 3, 524297, 3, 524298, 3, 524299, 1, 524301, 1, 524302, 3, 524303, 3, 524304, 1, 524305, 1, 524306, 1, 524307, 3, 524308, 1, 524309, 1, 524311, 1, 589825, 1, 589826, 1, 589827, 1, 589828, 1, 589829, 1, 589830, 1, 589831, 1, 589832, 1, 589833, 3, 589834, 3, 589835, 1, 589836, 1, 589838, 3, 589839, 3, 589840, 1, 589841, 1, 589842, 1, 589843, 3, 589844, 1, 589845, 1, 655362, 1, 655363, 1, 655364, 1, 655365, 1, 655366, 1, 655367, 1, 655368, 1, 655369, 3, 655370, 3, 655371, 1, 655372, 1, 655374, 3, 655375, 3, 655376, 1, 655377, 1, 655378, 1, 655379, 3, 655380, 1, 655381, 1, 720900, 3, 720910, 3, 720915, 3 )
+tile_data = IntArray( -65535, 1, -65534, 1, -65533, 1, -65532, 1, -65531, 1, -65530, 1, -65529, 1, -65528, 4, -65525, 5, -65524, 4, -65521, 5, -65520, 1, -65519, 1, -65518, 4, -65516, 5, -65515, 1, -65514, 1, -65513, 1, -65512, 1, 1, 1, 2, 1, 3, 1, 4, 1, 5, 1, 6, 1, 7, 1, 8, 4, 11, 5, 12, 4, 15, 5, 16, 1, 17, 1, 18, 4, 21, 5, 22, 1, 23, 1, 65537, 1, 65538, 1, 65539, 1, 65540, 1, 65541, 1, 65542, 1, 65543, 4, 65548, 4, 65551, 5, 65552, 1, 65554, 4, 65557, 5, 65558, 1, 65559, 1, 131073, 1, 131074, 1, 131075, 1, 131076, 1, 131077, 1, 131078, 1, 131083, 5, 131084, 4, 131087, 5, 131088, 1, 131089, 1, 131090, 1, 131091, 1, 131095, 1, 196609, 1, 196610, 1, 196611, 1, 196612, 1, 196613, 6, 196614, 6, 196615, 6, 196617, 6, 196619, 5, 196620, 4, 196623, 5, 196624, 1, 196625, 1, 196626, 4, 196629, 5, 196630, 1, 196631, 1, 262145, 1, 262146, 1, 262147, 1, 262148, 1, 262156, 6, 262159, 5, 262160, 1, 262161, 1, 262162, 4, 262165, 5, 262166, 1, 262167, 1, 327681, 1, 327682, 1, 327683, 1, 327684, 1, 327698, 4, 327701, 5, 327702, 1, 327703, 1, 393217, 1, 393218, 1, 393219, 1, 393220, 1, 393221, 7, 393222, 7, 393227, 5, 393228, 4, 393231, 5, 393232, 1, 393233, 1, 393234, 4, 393237, 5, 393239, 1, 458753, 1, 458755, 1, 458756, 1, 458757, 1, 458758, 1, 458759, 4, 458763, 5, 458764, 1, 458765, 4, 458767, 5, 458768, 1, 458769, 1, 458770, 4, 458772, 5, 458773, 1, 458774, 1, 458775, 1, 524289, 1, 524290, 1, 524291, 1, 524292, 1, 524293, 1, 524294, 1, 524295, 4, 524299, 5, 524301, 4, 524304, 5, 524305, 1, 524306, 4, 524308, 5, 524309, 1, 524311, 1, 589825, 1, 589826, 1, 589827, 1, 589828, 1, 589829, 1, 589830, 1, 589831, 1, 589832, 4, 589835, 5, 589836, 1, 589840, 5, 589841, 1, 589842, 4, 589844, 5, 589845, 1, 655362, 1, 655363, 1, 655364, 1, 655365, 1, 655366, 1, 655367, 1, 655368, 4, 655371, 5, 655372, 1, 655376, 5, 655377, 1, 655378, 4, 655380, 5, 655381, 1, 720900, 3, 720910, 3, 720915, 3 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="DecorTiles" parent="." instance=ExtResource( 3 )]
+
+tile_data = IntArray( -65534, 6, 65544, 2, 65557, 7, 131080, 2, 131088, 7, 131092, 2, 131095, 2, 196619, 6, 458753, 7, 458755, 2, 458764, 6 )
 
 [node name="PitMap" type="TileMap" parent="."]
 
 z/z = -1
 mode = 0
-tile_set = ExtResource( 3 )
+tile_set = ExtResource( 4 )
 cell/size = Vector2( 32, 32 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -59,50 +68,79 @@ collision/bounce = 0.0
 collision/layers = 2
 collision/mask = 2
 occluder/light_mask = 1
-tile_data = IntArray( 262149, 0, 262150, 1, 262151, 2, 327685, 3, 327686, 4, 327687, 5, 524310, 0, 589846, 3, 655382, 4, 655383, 4 )
+tile_data = IntArray( 262149, 0, 262150, 1, 262151, 2, 327685, 3, 327686, 4, 327687, 5, 524310, 0, 589846, 3, 655382, 6, 655383, 5 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="BlockMap" parent="." instance=ExtResource( 4 )]
+[node name="BlockMap" parent="." instance=ExtResource( 5 )]
 
 tile_data = IntArray( 65553, 0, 393223, 0, 393238, 0, 524300, 0 )
 
-[node name="Exit" parent="." instance=ExtResource( 5 )]
+[node name="TraverseTileMap" parent="." instance=ExtResource( 6 )]
+
+tile_data = IntArray( -65527, 0, -65526, 0, -65523, 0, -65522, 0, -65517, 0, 9, 0, 10, 0, 13, 0, 14, 0, 19, 0, 20, 0, 65544, 0, 65545, 0, 65546, 0, 65549, 0, 65550, 0, 65555, 0, 65556, 0, 131080, 0, 131081, 0, 131082, 0, 131085, 0, 131086, 0, 131092, 0, 131093, 0, 196616, 0, 196618, 0, 196621, 0, 196622, 0, 196627, 0, 196628, 0, 262152, 0, 262153, 0, 262154, 0, 262155, 0, 262157, 0, 262158, 0, 262163, 0, 262164, 0, 327688, 0, 327689, 0, 327690, 0, 327691, 0, 327692, 0, 327693, 0, 327694, 0, 327695, 0, 327696, 0, 327699, 0, 327700, 0, 393224, 0, 393225, 0, 393226, 0, 393229, 0, 393230, 0, 393235, 0, 393236, 0, 458760, 0, 458761, 0, 458762, 0, 458766, 0, 458771, 0, 524296, 0, 524297, 0, 524298, 0, 524302, 0, 524303, 0, 524307, 0, 589833, 0, 589834, 0, 589838, 0, 589839, 0, 589843, 0, 655369, 0, 655370, 0, 655374, 0, 655375, 0, 655379, 0 )
+
+[node name="Exit" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 752, 304 )
 z/z = -1
 
-[node name="LightPiece" parent="." instance=ExtResource( 6 )]
+[node name="LightPiece" parent="." instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 208, -16 )
 
-[node name="HeavyPiece" parent="." instance=ExtResource( 7 )]
+[node name="HeavyPiece" parent="." instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 208, 32 )
 
-[node name="MediumPiece" parent="." instance=ExtResource( 8 )]
+[node name="MediumPiece" parent="." instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 208, 80 )
 
-[node name="WallTileMap" parent="." instance=ExtResource( 9 )]
+[node name="WallTileMap" parent="." instance=ExtResource( 11 )]
 
 tile_data = IntArray( -131072, 0, -131071, 0, -131070, 0, -131069, 0, -131068, 0, -131067, 0, -131066, 0, -131065, 0, -131064, 0, -131063, 0, -131062, 0, -131061, 0, -131060, 0, -131059, 0, -131058, 0, -131057, 0, -131056, 0, -131055, 0, -131054, 0, -131053, 0, -131052, 0, -131051, 0, -131050, 0, -131049, 0, -131048, 0, -131047, 0, -65536, 0, -65511, 0, 0, 0, 24, 0, 25, 0, 65536, 0, 65547, 0, 65560, 0, 131072, 0, 131079, 0, 131091, 0, 131094, 0, 131096, 0, 196608, 0, 196632, 0, 262144, 0, 262168, 0, 327680, 0, 327697, 0, 327704, 0, 393216, 0, 393240, 0, 458752, 0, 458754, 0, 458776, 0, 524288, 0, 524312, 0, 589824, 0, 589837, 0, 589848, 0, 655360, 0, 655361, 0, 655373, 0, 655384, 0, 720896, 0, 720897, 0, 720898, 0, 720899, 0, 720900, 0, 720901, 0, 720902, 0, 720903, 0, 720904, 0, 720905, 0, 720906, 0, 720907, 0, 720908, 0, 720909, 0, 720910, 0, 720911, 0, 720912, 0, 720913, 0, 720914, 0, 720915, 0, 720916, 0, 720917, 0, 720918, 0, 720919, 0, 720920, 0 )
 
-[node name="CeilingTilemap" parent="." instance=ExtResource( 10 )]
+[node name="CeilingTilemap" parent="." instance=ExtResource( 12 )]
 
 tile_data = IntArray( -196608, 0, -196607, 0, -196606, 0, -196605, 0, -196604, 0, -196603, 0, -196602, 0, -196601, 0, -196600, 0, -196599, 0, -196598, 0, -196597, 0, -196596, 0, -196595, 0, -196594, 0, -196593, 0, -196592, 0, -196591, 0, -196590, 0, -196589, 0, -196588, 0, -196587, 0, -196586, 0, -196585, 0, -196584, 0, -196583, 0, -131072, 0, -131047, 0, -65536, 0, -65512, 0, -65511, 0, 0, 0, 11, 0, 24, 0, 65536, 0, 65543, 0, 65555, 0, 65558, 0, 65560, 0, 131072, 0, 131096, 0, 196608, 0, 196632, 0, 262144, 0, 262161, 0, 262168, 0, 327680, 0, 327704, 0, 393216, 0, 393218, 0, 393240, 0, 458752, 0, 458776, 0, 524288, 0, 524301, 0, 524312, 0, 589824, 0, 589825, 0, 589837, 0, 589848, 0, 655360, 0, 655361, 0, 655362, 0, 655363, 0, 655364, 0, 655365, 0, 655366, 0, 655367, 0, 655368, 0, 655369, 0, 655370, 0, 655371, 0, 655372, 0, 655373, 0, 655374, 0, 655375, 0, 655376, 0, 655377, 0, 655378, 0, 655379, 0, 655380, 0, 655381, 0, 655382, 0, 655383, 0, 655384, 0 )
 
-[node name="LightJunction" parent="." instance=ExtResource( 11 )]
+[node name="LightJunction" parent="." instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 144, -16 )
 
-[node name="MediumJunction" parent="." instance=ExtResource( 12 )]
+[node name="MediumJunction" parent="." instance=ExtResource( 14 )]
 
 transform/pos = Vector2( 144, 80 )
 
-[node name="HeavyJunction" parent="." instance=ExtResource( 13 )]
+[node name="HeavyJunction" parent="." instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 144, 32 )
+
+[node name="DecorGear1" parent="." instance=ExtResource( 16 )]
+
+transform/pos = Vector2( -1, -91 )
+
+[node name="DecorGear3" parent="." instance=ExtResource( 17 )]
+
+transform/pos = Vector2( 255, 425 )
+
+[node name="DecorGear2" parent="." instance=ExtResource( 18 )]
+
+transform/pos = Vector2( -12, 266 )
+transform/scale = Vector2( -1, 1 )
+
+[node name="DecorGear1 2" parent="." instance=ExtResource( 16 )]
+
+transform/pos = Vector2( 798, 383 )
+
+[node name="DecorGear2 2" parent="." instance=ExtResource( 18 )]
+
+transform/pos = Vector2( 799, 18 )
+
+[node name="DecorGear3 2" parent="." instance=ExtResource( 17 )]
+
+transform/pos = Vector2( 589, -116 )
 
 

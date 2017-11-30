@@ -16,7 +16,7 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 3.0
 } ]
 
 [node name="Node" type="Node"]
@@ -27,7 +27,6 @@ script/script = ExtResource( 1 )
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 6
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -52,7 +51,7 @@ drag_margin/bottom = 0.2
 [node name="Timer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 2.0
+wait_time = 4.0
 one_shot = true
 autostart = false
 
